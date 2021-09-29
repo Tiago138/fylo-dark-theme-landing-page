@@ -1,0 +1,85 @@
+.earlyAccess {
+    position: relative;
+    background-color: $darkBlue1;
+    width: 275px;
+    margin: auto;
+    padding: 30px;
+    padding-top: 45px;
+    padding-bottom: 36px;
+    border-radius: 10px;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+        width: 802px;
+        padding-top: 45px;
+        padding-bottom: 40px;
+        margin-top: 180px;
+    }
+
+    &__h2 {
+        font-family: $fontH;
+        font-size: 16px;
+        padding-bottom: 23px;
+        font-weight: $wBold;
+
+        @include breakpoint-up(large) {
+            font-size: 34px;
+        }
+    }
+
+    &__paragraph {
+        font-size: 14px;
+        padding-bottom: 33px;
+
+        @include breakpoint-up(large) {
+            font-size: 14px;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+    }
+
+    &__input {
+        width: 200px;
+        font-size: 13px;
+        padding: 16px 30px;
+        border-radius: 26px;
+        border: none;
+        margin-bottom: 23px;
+        box-shadow: inset 2px 2px 2px #eee;
+
+        @include breakpoint-up(large) {
+            width: 420px;
+            margin-right: 30px;
+        }
+
+        &:focus {
+            border: none;
+            outline: 0;
+        }
+    }
+
+    .erro-msg {
+        color: $lightRed;
+        font-size: 10px;
+
+        @include breakpoint-up(large) {
+            position: absolute;
+            left: 95px;
+            bottom: 45px;
+        }
+    }
+
+    &__btn {
+        padding: 16px 70px;
+        margin-top: 10px;
+
+        @include breakpoint-up(large) {
+            padding: 16px 50px;
+        }
+    }
+}
+
+.background {
+    padding-bottom: 73px;
+    background: linear-gradient($darkBlue2 42%, $darkBlue3 0%);
+}

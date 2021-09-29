@@ -1,0 +1,54 @@
+* {
+    font-size: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: $white;
+    font-family: $fontB;
+    font-weight: $wLight;
+    font-size: $font-med;
+    background: $darkBlue2;
+    overflow-x: hidden;
+}
+
+.btn {
+    position: relative;
+    color: $white;
+    font-weight: $wBold;
+    background-image: linear-gradient(to right, $cyan, $blue);
+    font-size: 13px;
+    padding: 16px 82px;
+    border-radius: 26px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.40);
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.hide {
+    visibility: hidden;
+}

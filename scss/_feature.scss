@@ -1,0 +1,44 @@
+.feature {
+    text-align: center;
+    padding: 0 36px;
+    padding-bottom: 74px;
+
+    .feature__img {
+        width: auto;
+        height: 54px;
+        padding-bottom: 37px;
+
+        @include breakpoint-up(large) {
+            width: auto;
+            height: 78px;
+        }
+    }
+
+    .feature__h2 {
+        font-family: $fontH;
+        font-size: 18px;
+        font-weight: $wBold;
+        padding-bottom: 14px;
+
+        @include breakpoint-up(large) {
+            font-size: 20px;
+        }
+    }
+
+    .feature__paragraph {
+        padding-bottom: 88px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+.feature__grid {
+
+    @include breakpoint-up(large) {
+        width: 910px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 150px;
+    }
+}

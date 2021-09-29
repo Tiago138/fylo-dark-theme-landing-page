@@ -1,0 +1,207 @@
+.hero {
+
+    @include breakpoint-up(large) {
+        width: 752px;
+        margin: 0 auto;
+    }
+
+    &__img {
+        position: relative;
+        padding: 0 36px;
+        padding-bottom: 34px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .wave__mobile {
+            height: -50px;
+            background-color: $darkBlue1;
+
+            @include breakpoint-up(large) {
+                display: none;
+            }
+
+            img {
+                background-color: $darkBlue1;
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0%;
+                left: 0;
+                padding-top: 50%;
+                z-index: -1;
+            }
+        }
+
+        .wave__desktop {
+            display: none;
+
+            @include breakpoint-up(large) {
+                display: initial;
+                background-color: $darkBlue1;
+
+                img {
+                    padding-top: 113%;
+                    background-color: $darkBlue1;
+                    position: absolute;
+                    width: 100vw;
+                    height: auto;
+                    margin-left: -45.2%;
+                    transform: translate(-50%);
+                    top: -43%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &__text {
+        padding: 0 36px;
+        text-align: center;
+        align-items: center;
+
+        .hero__h1 {
+            font-family: $fontH;
+            font-size: 24px;
+            line-height: 1.4;
+            padding-bottom: 18px;
+
+            @include breakpoint-up(large) {
+                font-size: 38px;
+                padding-bottom: 42px;
+                line-height: 1.5;
+            }
+        }
+
+        .hero__paragraph {
+            line-height: 1.4;
+            padding-bottom: 33px;
+
+            @include breakpoint-up(large) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .hero__btn {
+
+        @include breakpoint-up(large) {
+            font-size: 14px;
+            padding: 22px 94px;
+            border-radius: 29px;
+        }
+    }
+
+    .btn-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 131px;
+
+        @include breakpoint-up(large) {
+            padding-bottom: 164px;
+        }
+    }
+}
+
+.hero2 {
+    padding: 0 36px;
+    padding-bottom: 153px;
+
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 100px;
+        padding-right: 115px;
+        grid-column-gap: 55px;
+    }
+
+    &__img {
+
+        img {
+            width: 100%;
+            height: auto;
+            padding-bottom: 52px;
+        }
+    }
+
+    .hero2__h2 {
+        text-align: center;
+        font-family: $fontH;
+        font-size: 18px;
+        font-weight: $wBold;
+        padding-bottom: 22px;
+
+        br {
+            display: none;
+        }
+
+        @include breakpoint-up(large) {
+            font-size: 42px;
+            text-align: left;
+            line-break: auto;
+            padding-top: 100px;
+
+            br {
+                display: initial;
+            }
+        }
+    }
+
+    .hero2__paragraph {
+        padding-bottom: 20px;
+        font-size: 13px;
+
+        @include breakpoint-up(large) {
+            font-size: 17px;
+        }
+    }
+
+    .border-bt {
+        position: relative;
+        width: 140px;
+        border-bottom: 1px solid $cyan;
+        padding-bottom: 4px;
+        transition: border-color ease-in-out 150ms;
+
+        @include breakpoint-up(large) {
+            width: 176px;
+        }
+
+        .hero2__link {
+            color: $cyan;
+            font-size: 13px;
+            font-weight: $wLight;
+            text-decoration: none;
+            transition: color ease-in-out 150ms;
+
+            @include breakpoint-up(large) {
+                font-size: 17px;
+            }
+
+            svg {
+                position: absolute;
+                padding-left: 7px;
+                bottom: 4px;
+
+                use {
+                    transition: fill ease-in-out 150ms;
+                }
+            }
+        }
+
+        &:hover {
+            border-color: $white;
+
+            .hero2__link {
+                color: $white;
+
+                .svg use {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.footer {
+    background-color: $darkBlue3;
+
+    &__logo {
+
+        &__img {
+            padding-left: 38px;
+            padding-bottom: 44px;
+
+            @include breakpoint-up(large) {
+                padding-left: 118px;
+            }
+        }
+    }
+
+    .location {
+        position: relative;
+        margin-left: 27px;
+        margin-bottom: 22px;
+
+        @include breakpoint-up(large) {
+            margin-left: 0;
+        }
+
+        img {
+            position: absolute;
+            float: left;
+            top: 8px;
+        }
+
+        .adreass {
+            margin-left: 27px;
+            margin-right: 32px;
+            font-size: 16px;
+            line-height: 1.5;
+
+            @include breakpoint-up(large) {
+                max-width: 324px;
+            }
+        }
+    }
+
+    .contact {
+        margin-left: 27px;
+        margin-bottom: 88px;
+
+        img {
+            margin-right: 8px;
+            height: 15px;
+            width: auto;
+        }
+
+        .phone {
+            margin-bottom: 26px;
+        }
+    }
+
+    .footer_links {
+
+        a {
+            margin-left: 27px;
+            text-decoration: none;
+            color: $white;
+            font-size: 16px;
+            display: flex;
+            margin-bottom: 18px;
+            transition: ease-in-out 150ms;
+
+            &:hover {
+                font-weight: $wBold;
+            }
+        }
+    }
+
+    .col1 {
+        margin-bottom: 48px;
+    }
+
+    .col2 {
+        margin-bottom: 62px;
+    }
+
+    .footer__social {
+        text-align: center;
+        margin-bottom: 43px;
+
+        @include breakpoint-up(large) {
+            text-align: right;
+        }
+
+        a {
+            position: relative;
+            color: $white;
+            font-size: 14px;
+            transition: color ease-in-out 150ms;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                min-width: 28px;
+                min-height: 28px;
+                border: 1px solid white;
+                border-radius: 50%;
+                top: -5px;
+                right: -9px;
+                transition: ease-in-out 150ms;
+            }
+
+            &:hover {
+                color: $cyan;
+
+                &::before {
+                    border-color: $cyan;
+                }
+            }
+        }
+    }
+
+    &__grid {
+        @include breakpoint-up(large) {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr repeat(3, 1fr);
+            padding-left: 118px;
+            padding-right: 80px;
+        }
+    }
+}

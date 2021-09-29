@@ -1,0 +1,86 @@
+.comments {
+    padding-bottom: 120px;
+
+    @include breakpoint-up(large) {
+        max-width: 1162px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        padding: 0 10px;
+    }
+
+    &__item {
+        width: 260px;
+        margin: auto;
+        background-color: $darkBlue4;
+        padding: 0 20px;
+        padding-top: 30px;
+        padding-bottom: 22px;
+        margin-bottom: 23px;
+        border-radius: 5px;
+
+        @include breakpoint-up(large) {
+            width: auto;
+            padding: 0 26px;
+            padding-top: 42px;
+            padding-bottom: 26px;
+        }
+
+        .comments__paragraph {
+            font-size: 11px;
+            padding-bottom: 20px;
+
+            @include breakpoint-up(large) {
+                font-size: 14px;
+                padding-bottom: 24px;
+            }
+        }
+
+        .comments__author {
+
+            img {
+                max-width: 25px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 7px;
+            }
+
+            .name {
+                font-size: 10px;
+                font-weight: $wBold;
+            }
+
+            .job {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+.absolute {
+    position: relative;
+
+    .quotes {
+        position: absolute;
+        top: -16px;
+        left: 10px;
+
+        @include breakpoint-up(large) {
+            top: -33px;
+            left: -11px;
+            z-index: -1;
+        }
+
+        img {
+            width: 22px;
+            height: auto;
+
+            @include breakpoint-up(large) {
+
+                width: 54px;
+                height: auto;
+            }
+        }
+    }
+}

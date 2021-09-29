@@ -1,0 +1,50 @@
+.header {
+    background-color: $darkBlue1;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+
+    @include breakpoint-up(large) {
+        padding: 72px 80px;
+    }
+
+    &__logo {
+        width: 80px;
+        height: auto;
+
+        @include breakpoint-up(large) {
+            width: 176px;
+            height: auto;
+        }
+    }
+
+    &__menu {
+        float: right;
+
+        @include breakpoint-up(large) {
+            padding-top: 18px;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            font-family: $fontH;
+            font-size: 12px;
+            transition: ease-in-out 150ms;
+
+            @include breakpoint-up(large) {
+                font-size: 14px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            &:hover {
+                font-weight: $wBold;
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}
