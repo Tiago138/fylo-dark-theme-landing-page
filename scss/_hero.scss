@@ -1,23 +1,25 @@
 .hero {
 
-    @include breakpoint-up(large) {
-        width: 752px;
-        margin: 0 auto;
-    }
-
     &__img {
         position: relative;
         padding: 0 36px;
         padding-bottom: 34px;
 
-        img {
-            width: 100%;
-            height: auto;
+        .intro {
+
+            @include breakpoint-up(large) {
+                width: 752px;
+                margin: auto;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
+
         .wave__mobile {
-            height: -50px;
-            background-color: $darkBlue1;
 
             @include breakpoint-up(large) {
                 display: none;
@@ -40,17 +42,15 @@
 
             @include breakpoint-up(large) {
                 display: initial;
-                background-color: $darkBlue1;
 
                 img {
-                    padding-top: 113%;
                     background-color: $darkBlue1;
                     position: absolute;
-                    width: 100vw;
+                    width: 100%;
                     height: auto;
-                    margin-left: -45.2%;
-                    transform: translate(-50%);
-                    top: -43%;
+                    top: 0%;
+                    left: 0;
+                    padding-top: 665px;
                     z-index: -1;
                 }
             }
@@ -61,6 +61,11 @@
         padding: 0 36px;
         text-align: center;
         align-items: center;
+
+        @include breakpoint-up(large) {
+            width: 752px;
+            margin: 0 auto;
+        }
 
         .hero__h1 {
             font-family: $fontH;
